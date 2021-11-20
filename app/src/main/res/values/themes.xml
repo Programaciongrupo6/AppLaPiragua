@@ -13,4 +13,14 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Theme.AppLaPiragua.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.AppLaPiragua.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.AppLaPiragua.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="theme_home" parent="Theme.AppLaPiragua">
+        <item name="colorPrimary">@color/purple_500</item>
+    </style>
+
 </resources>
