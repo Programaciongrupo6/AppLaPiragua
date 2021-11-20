@@ -7,4 +7,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+
+
+    <color name="coltheme1_amarilloPiel">#FFDA7A</color>
+    <color name="coltheme1_amarilloOcreClaro">#E1CE70</color>
+    <color name="coltheme1_amarilloOcreOscuro">#AA9422</color>
+
+    <color name="coltheme1_gris">#C4C4C4</color>
+    <color name="coltheme1_verdeOscuro">#071716</color>
+    <color name="coltheme1_grisOscuro">#374343</color>
+
+    <color name="coltheme1_rojo">#9D1907</color>
+    <color name="coltheme1_verde">#2E9A92</color>
 </resources>
