@@ -7,20 +7,42 @@
     tools:context=".CodigoQR">
 
 
+    <Button
+        android:id="@+id/abrirScanner"
+        android:layout_width="179dp"
+        android:layout_height="58dp"
+        android:background="@color/coltheme1_verde"
+        android:onClick="onclick"
+        android:padding="15dp"
+        android:text="Escribir QR"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.898">
+
+    </Button>
+
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="170dp"
         android:layout_height="144dp"
         app:layout_constraintBottom_toTopOf="@+id/AbrirScanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/camPic"
-        tools:layout_editor_absoluteX="215dp" />
+        app:srcCompat="@drawable/camarita" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="207dp"
-        android:layout_height="491dp"
+        android:layout_width="192dp"
+        android:layout_height="454dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -91,6 +113,20 @@
 
     </Button>
 
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="177dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="Codigo QR"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/abrirScanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/AbrirScanner"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
