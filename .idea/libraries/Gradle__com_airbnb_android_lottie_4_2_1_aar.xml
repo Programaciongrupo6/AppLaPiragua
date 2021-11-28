@@ -4,8 +4,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/355d4f5e64f182d1d4e1213068aad4d2/transformed/jetified-lottie-4.2.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/355d4f5e64f182d1d4e1213068aad4d2/transformed/jetified-lottie-4.2.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/355d4f5e64f182d1d4e1213068aad4d2/transformed/jetified-lottie-4.2.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/355d4f5e64f182d1d4e1213068aad4d2/transformed/jetified-lottie-4.2.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/355d4f5e64f182d1d4e1213068aad4d2/transformed/jetified-lottie-4.2.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
