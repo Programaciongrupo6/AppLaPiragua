@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fondo"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
@@ -80,6 +80,7 @@
                 android:fontFamily="@font/amaranth"
                 android:gravity="start"
                 android:padding="20dp"
+                android:layout_margin="10dp"
                 android:text="Continúa con Google"
                 android:textColor="@color/coltheme1_verdeOscuro"
                 android:textSize="18sp" />
@@ -101,7 +102,8 @@
                 android:text="Continúa con contraseña"
                 android:textColor="@color/coltheme1_verdeOscuro"
                 android:textSize="18sp"
-                app:cornerRadius="50dp" />
+                app:cornerRadius="50dp"
+                android:layout_margin="10dp"/>
         </LinearLayout>
 
 
