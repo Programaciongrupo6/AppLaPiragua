@@ -3,21 +3,35 @@ package com.lapiragua.applapiragua;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class HomeActivity extends AppCompatActivity {
+
+    private Button btnRegisterP;
+    private Button btnCodigoQR;
+    private Button btnConsultaP;
+    private Button btnLogaut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        init();
+        event();
     }
+
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -43,44 +57,58 @@ public class HomeActivity extends AppCompatActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
-    public  boolean onCreateOptionsMenu(Menu mi_menu){
-        getMenuInflater().inflate(R.menu.menu_home, mi_menu);
 
-        return true;
-    }
-    /*
-    public boolean onOptionsItemSelected(MenuItem item){
-        switch (item.getItemId()){
+    private void init(){
+        btnLogaut = findViewById(R.id.button_logaut);
+        btnRegisterP = findViewById(R.id.button_RegisterP);
+        btnCodigoQR = findViewById(R.id.button_CodigoQR);
+        btnConsultaP = findViewById(R.id.button_ConsultaP);
 
-            case R.id.item_Home:
-                Toast.makeText(this, "home", Toast.LENGTH_SHORT).show();
-                Init_activityClass2();
-                return true;
-            case R.id.item_Config:
-                Toast.makeText(this, "config", Toast.LENGTH_SHORT).show();
-                Init_activityClass2_1();
-                return true;
-            case R.id.item_About:
-                Toast.makeText(this, "about", Toast.LENGTH_SHORT).show();
-                Init_activityClass2_2();
-                return true;
-        }
-        return true;
     }
-    public void Init_activityClass2(){
-        Intent intent = new Intent(this, clase_2.class);
+    private void event(){
+        btnLogaut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logaut();
+            }
+        });
+        btnRegisterP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showRegistrarPatrimonioUI();
+            }
+        });
+        btnConsultaP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showBuscarPatrimonioUI();
+            }
+        });
+        btnCodigoQR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showQRUI();
+            }
+        });
+    }
+    private void logaut(){
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-
-    public void Init_activityClass2_1(){
-        Intent intent = new Intent(this, clase_2_1.class);
+    private void showRegistrarPatrimonioUI(){
+        Intent intent = new Intent(this, registrar_patrimonio.class);
         startActivity(intent);
     }
-    public void Init_activityClass2_2(){
-        Intent intent = new Intent(this, clase_2_2.class);
+    private void showBuscarPatrimonioUI(){
+        Intent intent = new Intent(this, buscar_patrimonio.class);
         startActivity(intent);
     }
+    private void showQRUI(){
 
-     */
+    }
+
+
+
 
 }
