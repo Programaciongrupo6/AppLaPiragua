@@ -72,11 +72,40 @@ public class HomeActivity extends AppCompatActivity {
                 logaut();
             }
         });
+        btnRegisterP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showRegistrarPatrimonioUI();
+            }
+        });
+        btnConsultaP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showBuscarPatrimonioUI();
+            }
+        });
+        btnCodigoQR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showQRUI();
+            }
+        });
     }
     private void logaut(){
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+    private void showRegistrarPatrimonioUI(){
+        Intent intent = new Intent(this, registrar_patrimonio.class);
+        startActivity(intent);
+    }
+    private void showBuscarPatrimonioUI(){
+        Intent intent = new Intent(this, buscar_patrimonio.class);
+        startActivity(intent);
+    }
+    private void showQRUI(){
+
     }
 
 

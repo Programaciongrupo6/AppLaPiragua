@@ -17,9 +17,13 @@
         <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/drawable/icon_call.xml" value="0.2" />
         <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/drawable/icon_email.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/drawable/icono_google.xml" value="0.26197916666666665" />
+        <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/drawable/redondeado.xml" value="0.14322916666666666" />
         <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/layout/activity_auth.xml" value="0.2175732217573222" />
-        <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/layout/activity_buscar.xml" value="0.24592391304347827" />
+        <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/layout/activity_buscar_patrimonio.xml" value="0.1474820143884892" />
+        <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/layout/activity_registrar_patrimonio.xml" value="0.24592391304347827" />
         <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/layout/activity_splash.xml" value="0.4" />
         <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/menu/menu_home.xml" value="0.20885416666666667" />
         <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21875" />
