@@ -105,9 +105,10 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
     private void showQRUI(){
+        Intent intent = new Intent(this, CodigoQR.class);
+        startActivity(intent);
 
     }
-
 
 
 
