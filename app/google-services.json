@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1056200323019",
+    "project_id": "la-piragua-b3674",
+    "storage_bucket": "la-piragua-b3674.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056200323019:android:4d5d0e134c7ab3ce09104e",
+        "android_client_info": {
+          "package_name": "com.lapiragua.applapiragua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1056200323019-4n9b09v0ocakv70527676vs5i17rtlnt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lapiragua.applapiragua",
+            "certificate_hash": "661415181fc038c85778cd10224ba108d88b80d7"
+          }
+        },
+        {
+          "client_id": "1056200323019-dm7bshjpm2o3ovlo6lbon9rja6lhv1r7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5YwmMw-h5vVVTL7YELRDk6ISDSz2j-UA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1056200323019-dm7bshjpm2o3ovlo6lbon9rja6lhv1r7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

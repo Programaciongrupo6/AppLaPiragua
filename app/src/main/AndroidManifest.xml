@@ -10,13 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppLaPiragua">
         <activity
-            android:name=".HomeActivity"
-            android:exported="false"
-            android:theme="@style/theme_home"/>
-        <activity
-            android:name=".authActivity"
-            android:exported="false"></activity>
-        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -27,7 +20,24 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="false"/>
+        <activity
+            android:name=".authActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:theme="@style/theme_home"/>
+
+
+        <activity
+            android:name=".registrar_patrimonio"
+            android:exported="false" />
+        <activity
+            android:name=".buscar_patrimonio"
+            android:exported="false" />
+
 
         <meta-data
             android:name="preloaded_fonts"
