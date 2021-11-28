@@ -21,4 +21,7 @@
 
     <color name="coltheme1_rojo">#9D1907</color>
     <color name="coltheme1_verde">#2E9A92</color>
+    <color name="color_fondo_home">#FDF3D7</color>
+
+
 </resources>

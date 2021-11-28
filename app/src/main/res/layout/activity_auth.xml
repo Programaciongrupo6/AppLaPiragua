@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".authActivity"
-    android:background="@color/white">
+    android:id="@+id/constraintLayout">
 
     <ImageView
         android:id="@+id/imageFondoSuperior"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:background="@mipmap/fondo_principal"
         android:contentDescription="@string/description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@mipmap/fondo_principal"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageFondoInclinado"
@@ -38,132 +39,184 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageFondoSuperior"
         app:srcCompat="@drawable/ic_logo" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Button
+        android:id="@+id/button_AuthBack"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_arrow"
+        android:drawableLeft="@drawable/icon_arrow"
+        android:gravity="start"
+        android:padding="10dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageFondoSuperior">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo">
+
+        <TextView
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="50dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:fontFamily="@font/aclonica"
+            android:gravity="center"
+            android:text="Autenticación"
+            android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/textView6"
+        <Switch
+            android:id="@+id/switch_register_login"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:checked="false"
+            android:fontFamily="@font/amaranth"
+            android:text="¿Quieres regístrate?  "
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="@color/coltheme1_verdeOscuro">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/aclonica"
-                android:gravity="center"
-                android:text="Autenticación"
-                android:textSize="20sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="30dp" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edit_name"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColorHint="@color/coltheme1_verdeOscuro">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:fontFamily="@font/amaranth"
-                    android:hint="Nombre"
-                    android:inputType="textPersonName"
-                    android:paddingLeft="10dp"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edit_Email"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColorHint="@color/coltheme1_verdeOscuro">
-
-                <com.google.android.material.textfield.TextInputEditText
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:fontFamily="@font/amaranth"
-                    android:hint="Correo"
-                    android:inputType="textEmailAddress"
-                    android:paddingLeft="10dp"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edit_Mobile"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColorHint="@color/coltheme1_verdeOscuro">
-
-                <com.google.android.material.textfield.TextInputEditText
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:fontFamily="@font/amaranth"
-                    android:hint="Celular"
-                    android:inputType="phone"
-                    android:paddingLeft="10dp"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edit_Pass"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColorHint="@color/coltheme1_verdeOscuro"
-                app:endIconMode="password_toggle">
-
-                <com.google.android.material.textfield.TextInputEditText
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:fontFamily="@font/amaranth"
-                    android:hint="Contraseña"
-                    android:inputType="textPassword"
-                    android:paddingLeft="10dp"
-                    android:textSize="18sp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <Button
-                android:id="@+id/button_register"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/button_round_claro"
                 android:fontFamily="@font/amaranth"
-                android:paddingLeft="50dp"
-                android:paddingRight="50dp"
-                android:text="Registrar"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:textSize="18sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_Email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="@color/coltheme1_verdeOscuro">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/amaranth"
+                android:hint="Correo"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
                 android:textSize="18sp" />
-        </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_Mobile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="@color/coltheme1_verdeOscuro">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.textfield.TextInputEditText
 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
+                android:fontFamily="@font/amaranth"
+                android:hint="Celular"
+                android:inputType="phone"
+                android:paddingLeft="10dp"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_Pass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="@color/coltheme1_verdeOscuro"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/amaranth"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_PassPass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="@color/coltheme1_verdeOscuro"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/amaranth"
+                android:hint="Confirmar contraseña"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_round_claro"
+        android:fontFamily="@font/amaranth"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="Regístrame"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_round_claro"
+        android:fontFamily="@font/amaranth"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="Iniciar Sesión"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

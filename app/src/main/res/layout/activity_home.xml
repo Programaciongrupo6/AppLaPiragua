@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
-    android:background="@color/coltheme1_amarilloPiel">
+    android:background="@color/color_fondo_home">
 
     <ImageView
         android:id="@+id/imageFondoSuperior"
@@ -82,8 +82,8 @@
             android:paddingRight="30dp"
             android:paddingBottom="30dp"
             android:text="CONSULTAR PATRIMONIO"
-            android:textSize="18sp" />
-
+            android:textSize="18sp"
+            android:elevation="5dp"/>
         <Button
             android:id="@+id/button_CodigoQR"
             android:layout_width="match_parent"
@@ -95,6 +95,23 @@
             android:paddingBottom="30dp"
             android:text="CODIGO QR"
             android:textSize="18sp" />
+
+
+        <Button
+            android:id="@+id/button_logaut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_round_claro"
+            android:fontFamily="@font/amaranth"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="cerrar sesión"
+            android:textSize="18sp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
