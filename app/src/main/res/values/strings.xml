@@ -13,6 +13,6 @@
 
     <string-array name="tiposP">
         <item>Patrimonio inmaterial</item>
-        <item>Patrimonio tangible</item>
+        <item>Patrimonio material</item>
     </string-array>
 </resources>
