@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -22,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
     private Button btnCodigoQR;
     private Button btnConsultaP;
     private Button btnLogaut;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,13 @@ public class HomeActivity extends AppCompatActivity {
 
         init();
         event();
+    }
+    public void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser == null){
+            showMainUI();
+        }
     }
 
 
@@ -63,6 +72,7 @@ public class HomeActivity extends AppCompatActivity {
         btnRegisterP = findViewById(R.id.button_RegisterP);
         btnCodigoQR = findViewById(R.id.button_CodigoQR);
         btnConsultaP = findViewById(R.id.button_ConsultaP);
+        mAuth = FirebaseAuth.getInstance();
 
     }
     private void event(){
@@ -108,6 +118,10 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CodigoQR.class);
         startActivity(intent);
 
+    }
+    private void showMainUI(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
 

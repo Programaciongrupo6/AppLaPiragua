@@ -15,4 +15,7 @@
         <item>Patrimonio inmaterial</item>
         <item>Patrimonio material</item>
     </string-array>
+
+    <string name="hint_resource">Tipo de patrimonio</string>
+    "
 </resources>

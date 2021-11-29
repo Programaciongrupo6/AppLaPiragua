@@ -304,8 +304,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_fondo_dos" />
-                            <entry key="sourceFile" value="C:\Users\Legion Y530\Desktop\TIC2021\Ciclo 4\movil\img\fondo_dos.svg" />
+                            <entry key="outputName" value="ic_camara" />
+                            <entry key="sourceFile" value="C:\Users\Legion Y530\Desktop\TIC2021\Ciclo 4\movil\img\camara.svg" />
                           </map>
                         </option>
                       </PersistentState>
