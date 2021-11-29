@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lapiragua.applapiragua">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_logo"
@@ -9,6 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppLaPiragua">
+        <activity
+            android:name=".LugarPatrimonialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewQRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CodigoQR"
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -20,24 +31,25 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".authActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="false"
-            android:theme="@style/theme_home"/>
-
-
+            android:theme="@style/theme_home" />
         <activity
             android:name=".registrar_patrimonio"
             android:exported="false" />
         <activity
             android:name=".buscar_patrimonio"
             android:exported="false" />
-
+        <activity
+            android:name=".Capture"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme" />
 
         <meta-data
             android:name="preloaded_fonts"
