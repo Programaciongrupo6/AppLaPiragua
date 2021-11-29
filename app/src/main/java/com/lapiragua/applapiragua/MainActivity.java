@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (ApiException e) {
                 //se sale de la seleccion de cuenta
                 msn("Google sign in failed");
+                msn(e.toString());
             }
         }
     }

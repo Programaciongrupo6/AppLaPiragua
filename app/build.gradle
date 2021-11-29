@@ -39,9 +39,19 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
     implementation 'com.airbnb.android:lottie:4.2.1'
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //Escanner QR
+    implementation 'com.journeyapps:zxing-android-embedded:3.2.0'
+    implementation 'com.google.zxing:core:3.3.0'
+    //Escaner QR V2
+    //revisar se ve mas bonito:
+    //https://www.youtube.com/watch?v=drH63NpSWyk
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
+    3
 
 
 
@@ -50,4 +60,5 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
     implementation 'com.google.firebase:firebase-auth:21.0.1'
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-firestore:24.0.0'
 }

@@ -4,32 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registrar_patrimonio"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".registrar_patrimonio">
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="411dp"
         android:layout_height="211dp"
+        android:background="@mipmap/fondo_principal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fondomenu" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="140dp"
-        android:layout_height="132dp"
-        android:background="@drawable/redondeado"
-        android:padding="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="-60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/ic_logo" />
 
     <TextView
         android:id="@+id/textView"
@@ -49,88 +46,123 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="254dp"
-        android:layout_height="35dp"
-        android:text="Completa los siguientes datos:"
-        android:textAlignment="center"
-        android:textColor="#040404"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView6">
 
-    <EditText
-        android:id="@+id/nombreLugar"
-        android:layout_width="259dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:hint="Nombre del lugar"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:text="Completa los siguientes datos:"
+            android:textAlignment="center"
+            android:textColor="#040404"
+            android:textSize="18sp" />
 
-    <Spinner
-        android:id="@+id/tipoPatrimonio"
-        android:layout_width="259dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="12dp"
-        android:hint="Tipo de patrimonio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreLugar" />
+        <EditText
+            android:id="@+id/editText_nombreLugar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:ems="10"
+            android:hint="Nombre del lugar"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:textSize="16sp" />
 
-    <EditText
-        android:id="@+id/palabrasClave"
-        android:layout_width="259dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:hint="Palaras clave"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tipoPatrimonio" />
+        <Spinner
+            android:id="@+id/spinner_tipoPatrimonio"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:hint="Tipo de patrimonio"
+            android:textSize="16sp" />
 
-    <EditText
-        android:id="@+id/ubicacion"
-        android:layout_width="259dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Ubicacion"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etiqueta" />
+        <EditText
+            android:id="@+id/editText_palabrasClave"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:ems="10"
+            android:hint="Palaras clave"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/editText_ubicacion"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:ems="10"
+            android:hint="Ubicacion"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/label_etiqueta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="end"
+            android:paddingLeft="15dp"
+            android:text="Etiqueta clave:"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView_etiqueta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="end"
+            android:paddingLeft="15dp"
+            android:text=""
+            android:textSize="16sp" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_sendRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:text="Registrar"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_margin="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ubicacion" />
+        android:background="@drawable/button_round_verde"/>
 
-    <TextView
-        android:id="@+id/etiqueta"
-        android:layout_width="260dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="4dp"
-        android:text="Etiqueta clave"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+    <Button
+        android:id="@+id/button_RP_Back"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_arrow"
+        android:drawableLeft="@drawable/icon_arrow"
+        android:gravity="start"
+        android:padding="10dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/palabrasClave" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
