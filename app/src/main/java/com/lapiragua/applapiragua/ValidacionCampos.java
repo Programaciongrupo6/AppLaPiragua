@@ -63,12 +63,12 @@ public class ValidacionCampos {
             }
         }
     }
-    public String generadorEtiqueta(String nombreLugar, String tipoPatrimonio){
+    public String generadorEtiqueta(String nombreLugar, String tipoPatrimonio,int numeroDeLugares){
         //Pattern regex = Pattern.compile("[A-Z]");
 //        if (nombreLugar.isEmpty() || tipoPatrimonio.isEmpty()){
 //            return "Tiene campos vacíos";
 //        }
-        int consecutivo = 1002;
+        int consecutivo = 1000+numeroDeLugares;
         String nombre = nombreLugar.substring(0,3).toUpperCase();
         String tipo;
         String etiqueta;
