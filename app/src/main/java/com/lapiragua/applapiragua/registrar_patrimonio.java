@@ -104,12 +104,14 @@ public class registrar_patrimonio extends AppCompatActivity {
                     db.collection("lugaresPatrimoniales")
                             .document(etiqueta)
                             .set(lugarP);
-                    msn("Lugar agregado correctamente");
+                    //msn("Lugar agregado correctamente");
                     TE_etiqueta.setText("");
                     ET_nombreLugar.setText("");
                     ET_palabrasClave.setText("");
                     ET_ubicacion.setText("");
                     dataBase();
+                    showSuccessUI();
+
                     /*
                     db.collection("lugaresPatrimoniales")
                             .add(lugarP)
@@ -216,6 +218,10 @@ public class registrar_patrimonio extends AppCompatActivity {
     }
     private void showHomeUI(){
         Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
+    private void showSuccessUI(){
+        Intent intent = new Intent(this,RegistroSuccess.class);
         startActivity(intent);
     }
     private void msn(String data){
