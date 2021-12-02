@@ -4,11 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/CARPETA DE USUARIO/Desktop/curso/Andoid/Sprints/ProyectoGit/AppLaPiragua/app/src/main/res/drawable/fondo_home.xml" value="0.2203125" />
+        <entry key="..\:/CARPETA DE USUARIO/Desktop/curso/Andoid/Sprints/ProyectoGit/AppLaPiragua/app/src/main/res/drawable/ic_barra_blanco_diagonal.xml" value="0.2203125" />
         <entry key="..\:/CARPETA DE USUARIO/Desktop/curso/Andoid/Sprints/ProyectoGit/AppLaPiragua/app/src/main/res/layout/activity_auth.xml" value="0.20416666666666666" />
         <entry key="..\:/CARPETA DE USUARIO/Desktop/curso/Andoid/Sprints/ProyectoGit/AppLaPiragua/app/src/main/res/layout/activity_codigo_qr.xml" value="0.20416666666666666" />
         <entry key="..\:/CARPETA DE USUARIO/Desktop/curso/Andoid/Sprints/ProyectoGit/AppLaPiragua/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
         <entry key="..\:/CARPETA DE USUARIO/Desktop/curso/Andoid/Sprints/ProyectoGit/AppLaPiragua/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/CARPETA DE USUARIO/Desktop/curso/Andoid/Sprints/ProyectoGit/AppLaPiragua/app/src/main/res/layout/activity_registrar_patrimonio.xml" value="0.20416666666666666" />
+        <entry key="..\:/CARPETA DE USUARIO/Desktop/curso/Andoid/Sprints/ProyectoGit/AppLaPiragua/app/src/main/res/layout/activity_registrar_patrimonio.xml" value="0.25" />
+        <entry key="..\:/CARPETA DE USUARIO/Desktop/curso/Andoid/Sprints/ProyectoGit/AppLaPiragua/app/src/main/res/layout/activity_registro_success.xml" value="0.25" />
         <entry key="..\:/CARPETA DE USUARIO/Desktop/curso/Andoid/Sprints/ProyectoGit/AppLaPiragua/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/drawable/button_arrow.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Legion Y530/Desktop/TIC2021/Ciclo 4/movil/AppLaPiragua/app/src/main/res/drawable/button_round_verde.xml" value="0.37864583333333335" />
