@@ -20,8 +20,12 @@ public class viewQRActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_qractivity);
+
+
         CodeScannerView scannerView = findViewById(R.id.scanner_view);
         mCodeScanner = new CodeScanner(this, scannerView);
+
+
 
 
         mCodeScanner.setDecodeCallback(new DecodeCallback() {
@@ -30,9 +34,11 @@ public class viewQRActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-
+                        System.out.println("-------------------------------------------------  "+1);
                         String codeQR;
                         codeQR= result.getText();
+                        System.out.println("-------------------------------------------------  "+2);
+
                         codeQR= codeQR.replaceFirst("\n", "");
                         Intent intent = new Intent(viewQRActivity.this, LugarPatrimonialActivity.class);
                         intent.putExtra("codeQR", codeQR);
