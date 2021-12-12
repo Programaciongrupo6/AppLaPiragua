@@ -17,5 +17,16 @@
     </string-array>
 
     <string name="hint_resource">Tipo de patrimonio</string>
-    "
+
+
+    <string name="title_home">Home</string>
+    <string name="title_registrar">Registrar</string>
+    <string name="title_buscar">buscar</string>
+    <string name="title_qr">Escanear</string>
+    <string name="title_usuario">Usuario</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main_borrar">MainActivityBorrar</string>
+
+
 </resources>

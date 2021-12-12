@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_home_navigation"
+    app:startDestination="@+id/navigation_home">
+
+
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.lapiragua.applapiragua.Home.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_registrar"
+        android:name="com.lapiragua.applapiragua.Home.FragmentRegistrar"
+        android:label="fragment_registrar"
+        tools:layout="@layout/fragment_registrar" />
+    <fragment
+        android:id="@+id/navigation_buscar"
+        android:name="com.lapiragua.applapiragua.Home.FragmentBuscar"
+        android:label="fragment_buscar"
+        tools:layout="@layout/fragment_buscar" />
+    <fragment
+        android:id="@+id/navigation_qr"
+        android:name="com.lapiragua.applapiragua.Home.FragmentQR"
+        android:label="fragment_q_r"
+        tools:layout="@layout/fragment_q_r" />
+    <fragment
+        android:id="@+id/navigation_usuario"
+        android:name="com.lapiragua.applapiragua.Home.FragmentUsuario"
+        android:label="fragment_usuario"
+        tools:layout="@layout/fragment_usuario" />
+</navigation>
