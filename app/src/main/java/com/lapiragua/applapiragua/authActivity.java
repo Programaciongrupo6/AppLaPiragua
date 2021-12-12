@@ -7,6 +7,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -14,12 +15,19 @@ import android.widget.EditText;
 import android.widget.Switch;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.lapiragua.applapiragua.Home.HomeAppActivity;
+import com.lapiragua.applapiragua.model.FirebaseReference;
+import com.lapiragua.applapiragua.model.User;
 
 public class authActivity extends AppCompatActivity {
     private Button btnRegister;
@@ -43,6 +51,7 @@ public class authActivity extends AppCompatActivity {
 
     private ConstraintLayout constraintLayoutView;
     private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +86,7 @@ public class authActivity extends AppCompatActivity {
 
 
         mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
 
     }
     private void event(){
@@ -163,6 +173,8 @@ public class authActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
+                            User user1 = new User(name, email, movile);
+                            saveUserFB(user1);
                             showHomeUI();
 
                         } else{
@@ -178,6 +190,28 @@ public class authActivity extends AppCompatActivity {
         }
         return true;
     }
+
+    private void saveUserFB(User user) {
+        db.collection(FirebaseReference.DB_REFERENCE_USERS)
+                .add(user)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Log.d("debug", "DocumentSnapshot added with ID: " + documentReference.getId());
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w("debug", "Error adding document", e);
+
+                    }
+                });
+
+
+    }
+
     private void showAuthUI(){
         Intent intentAuth = new Intent(this, MainActivity.class);
         startActivity(intentAuth);
@@ -192,7 +226,7 @@ public class authActivity extends AppCompatActivity {
 
     }
     private void showHomeUI(){
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, HomeAppActivity.class);
         startActivity(intent);
     }
     private void showAlert(){

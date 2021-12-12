@@ -23,6 +23,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.lapiragua.applapiragua.Home.HomeAppActivity;
 
 public class MainActivity extends AppCompatActivity {
     //Elementos
@@ -140,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
         mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
     private void showHomeUI(){
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, HomeAppActivity.class);
         startActivity(intent);
     }
     private void msn(String data){

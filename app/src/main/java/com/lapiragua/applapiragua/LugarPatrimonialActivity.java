@@ -6,15 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.lapiragua.applapiragua.Home.HomeAppActivity;
 
 public class LugarPatrimonialActivity extends AppCompatActivity {
     private String code;
@@ -23,6 +26,8 @@ public class LugarPatrimonialActivity extends AppCompatActivity {
     private TextView tv_palabrasClaves;
     private TextView tv_tipo;
     private TextView tv_ubicacion;
+    private TextView tv_descripcion;
+    private ImageView imageView_lugar;
     private ProgressBar progressBar;
     private LinearLayout linearLayout;
 
@@ -45,6 +50,9 @@ public class LugarPatrimonialActivity extends AppCompatActivity {
         tv_palabrasClaves = findViewById(R.id.textView_palabraClave);
         tv_tipo = findViewById(R.id.textView_tipo);
         tv_ubicacion = findViewById(R.id.textView_ubicacion);
+        tv_descripcion = findViewById(R.id.textView_descripcion);
+        imageView_lugar = findViewById(R.id.imageView_PhotoLugar);
+
         progressBar = findViewById(R.id.progressBar);
         linearLayout = findViewById(R.id.linearLayout_container);
         btn_LPQRBack= findViewById(R.id.button_lugarQr_Back);
@@ -71,6 +79,8 @@ public class LugarPatrimonialActivity extends AppCompatActivity {
 
     private void dataBase(String codeQR){
 
+        System.out.println("CODEEEEEEE: "+codeQR);
+
         docRef  = db.collection("lugaresPatrimoniales").document(codeQR).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -79,11 +89,16 @@ public class LugarPatrimonialActivity extends AppCompatActivity {
                     String palabraClave = documentSnapshot.getString("palabraClave");
                     String tipo = documentSnapshot.getString("tipo");
                     String ubicacion = documentSnapshot.getString("ubicacion");
+                    String descripcion = documentSnapshot.getString("descripcion");
+                    String url = documentSnapshot.getString("imageUrl");
 
                     tv_nombre.setText("Nombre: "+nombre);
                     tv_palabrasClaves.setText("Palabra clave: "+palabraClave);
                     tv_tipo.setText("Tipo: "+tipo);
                     tv_ubicacion.setText("Ubicación: "+ubicacion);
+                    tv_descripcion.setText("Descripción: "+descripcion);
+
+                    Glide.with(LugarPatrimonialActivity.this).load(url).into(imageView_lugar);
 
                     linearLayout.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.GONE);
@@ -140,7 +155,7 @@ public class LugarPatrimonialActivity extends AppCompatActivity {
 
     }
     private void showQRUI(){
-        Intent intent = new Intent(this, CodigoQR.class);
+        Intent intent = new Intent(this, HomeAppActivity.class);
         startActivity(intent);
     }
 }
